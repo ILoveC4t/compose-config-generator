@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  config-generator:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: config-generator:latest
+    environment:
+      SERVER_NAME: example.local
+      LISTEN_PORT: "8080"
+    volumes:
+      - ./templates:/templates:ro
+      - ./output:/output
+    restart: "no"

@@ -1,0 +1,2 @@
+${SERVER_NAME}:${LISTEN_PORT}
+respond "Hello from Caddy on ${SERVER_NAME}:${LISTEN_PORT}" 200
